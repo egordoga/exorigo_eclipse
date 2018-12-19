@@ -1,0 +1,116 @@
+<!doctype html>
+<html xmlns:wicket="http://wicket.apache.org" lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Users</title>
+</head>
+<body>
+<div class="container" id="bd" style="display: table;">
+    <form wicket:id="userForm">
+        <div class="row">
+            <div class="col-3 form-check">
+                <label>Find by :</label><br>
+                <span wicket:id="radioGroup"></span>
+            </div>
+            <div class="col-5 form-inline">
+                <input type="text" wicket:id="search" id="search" placeholder="Substring"/><br/>
+                <a wicket:id="searchLink" class="btn btn-primary ml-2" type="submit">Search</a>
+            </div>
+        </div>
+
+    </form>
+
+    <br>
+    <form wicket:id="formView">
+
+        <table class="table" wicket:id="container">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Last name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="users">
+                <td wicket:id="id">1</td>
+                <td wicket:id="name">Mark</td>
+                <td wicket:id="lastName">Otto</td>
+                <td><input wicket:id="check" type="checkbox"/></td>
+            </tr>
+
+            </tbody>
+        </table>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <input type="submit" value="Update/Delete" class="btn btn-info"/>
+                </div>
+                <div class="col-sm">
+                    <input type="checkbox" wicket:id="del"/> delete<br/>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form wicket:id="formUpdate">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Last name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="users">
+                <td wicket:id="id">1</td>
+                <td><input type="text" wicket:id="name" id="username"/></td>
+                <td><input type="text" wicket:id="lastName" id="lastName"/></td>
+            </tr>
+
+            </tbody>
+        </table>
+        <input type="submit" value="Update" class="btn btn-primary"/>
+    </form>
+
+</div>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <wicket:link>
+                <a class="btn btn-info" wicket:id="linkAll">All users</a><br/>
+            </wicket:link>
+        </div>
+        <div class="col-sm">
+            <wicket:link>
+                <a class="btn btn-info" href="LoginPage.html">Add user</a><br/>
+            </wicket:link>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
